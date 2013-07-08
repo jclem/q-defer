@@ -17,13 +17,10 @@ module Q
 
     @results = []
 
-    num_resolved = 0
-
     promises.each do |promise|
       promise.then do |result|
-        num_resolved += 1
         @results << result
-        defer.resolve(@results) if num_resolved == promises.length
+        defer.resolve(@results) if @results.length == promises.length
       end.fail do |result|
         defer.reject([result, @results])
       end
