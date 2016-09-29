@@ -2,6 +2,8 @@
 
 Q is a lightweight promise implementation in Ruby.
 
+**DON'T USE ME!** This project doesn't follow any promises spec. It's all wrong.
+
 ## Installation
 
 Add this line to your application's Gemfile:
